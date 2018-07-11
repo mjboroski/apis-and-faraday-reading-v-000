@@ -9,6 +9,7 @@ class SearchesController < ApplicationController
       req.params['v'] = '20160201'
       req.params['near'] = params[:zipcode]
       req.params['query'] = 'coffee shop'
+      req.options.timeout = 0
     end
     render 'search'
   end
